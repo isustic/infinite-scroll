@@ -49,7 +49,7 @@ function displayPhotos() {
     item.appendChild(img);
     imageContainer.appendChild(item);
 
-    // Event listener, check wen each is finished loading
+    // Event listener, check when each is finished loading
 
     img.addEventListener('load', checkImageLoaded);
 
@@ -63,7 +63,6 @@ async function getPhotosFromUnsplashApi() {
     try {
         const response = await fetch(apiUrl);
         photosArray = await response.json();
-
         displayPhotos();
     }
 
